@@ -1,70 +1,325 @@
 <!DOCTYPE html>
-<html lang="pt-br" >
+<html lang="pt-br">
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Space+Grotesk:wght@300..700&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"/>
-    <title>Fernando Muniz</title>
+    <title>Fernando Muniz | Portfolio</title>
 </head>
 <body>
-    <div id="container">
-        <div id="profile">
-            <img src="./assets/perfil1.jpeg" alt="Foto de Fernando"/>
-            <p>@fernd.muniz</p>
-        </div>
+    <div class="page">
+        <header class="topbar" data-animate>
+            <div class="brand">
+                <span class="brand-mark">FM</span>
+                <div class="brand-text">
+                    <span class="brand-title">Fernando Muniz</span>
+                    <span class="brand-subtitle">Portfolio digital</span>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="#projects">Projetos</a>
+                <a href="#skills">Habilidades</a>
+                <a href="#about">Sobre</a>
+                <a href="#contact">Contato</a>
+            </nav>
+            <div class="topbar-actions">
+                <a class="btn ghost" href="https://github.com/FaultModule" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <button id="switch" type="button" onclick="togglMode()" aria-label="Alternar tema" aria-pressed="false">
+                    <span class="switch-thumb"></span>
+                </button>
+            </div>
+        </header>
 
-        <div id="switch" onclick="togglMode()">
-            <button></button>
-            <span></span>
-        </div>
-        <ul>
-            <li>
-                <a href="https://primeiro-saas.vercel.app/"
-                target="_blank">Meu SaaS</a>
-            </li>
-            <li>
-                <a href="https://helecashfinal.onrender.com/" 
-                target="_blank">HeleCach</a>
-            </li>
-            <li>
-                <a href="https://reciclart-mocha.vercel.app/"
-                target="_blank">EcoOil</a>
-            </li>
-            <li>
-                <a href="https://www.salesforce.com/trailblazer/fc0yaucqttnirh30zk"
-                target="_blank">Conheça meu perfil Trailhead</a>
-            </li>
-        </ul>
-        <div id="social-links">
-            <a href="https://www.instagram.com/frndmuniz/" target="_blank">
-                <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-            <a href="https://github.com/FaultModule" target="_blank">
-                <ion-icon name="logo-github"></ion-icon>
-            </a>
-            <a href="https://www.youtube.com/@frndmuniz" target="_blank">
-                <ion-icon name="logo-youtube"></ion-icon>
-            </a>
-            <a href="https://www.linkedin.com/in/frndmuniz" target="_blank">
-                <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-            <a href="https://www.codewars.com/users/FaultModule" target="_blank">
-                <ion-icon name="qr-code-outline"></ion-icon>
-            </a>
-            <a href="https://www.salesforce.com/trailblazer/fc0yaucqttnirh30zk" target="_blank">
-                <ion-icon name="cloud-outline"></ion-icon>
+        <main>
+            <section class="hero" id="hero" data-animate>
+                <div class="hero-content">
+                    <span class="eyebrow">Portfolio 2026</span>
+                    <h1>Crio produtos digitais e experiencias web com foco em resultado.</h1>
+                    <p class="lead">Desenvolvedor focado em SaaS, automacoes e integracoes com Salesforce e JavaScript. Transformo ideias em apps escalaveis e bem desenhados.</p>
+                    <div class="hero-actions">
+                        <a class="btn primary" href="#projects">Ver projetos</a>
+                        <a class="btn ghost" href="#contact">Fale comigo</a>
+                    </div>
+                    <div class="stats" aria-label="Indicadores">
+                        <div class="stat">
+                            <div class="stat-number">
+                                <span class="stat-value" data-count="3">0</span>
+                                <span class="stat-suffix">+</span>
+                            </div>
+                            <span class="stat-label">Projetos ativos</span>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">
+                                <span class="stat-value" data-count="6">0</span>
+                                <span class="stat-suffix">+</span>
+                            </div>
+                            <span class="stat-label">Canais online</span>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">
+                                <span class="stat-value" data-count="4">0</span>
+                                <span class="stat-suffix">+</span>
+                            </div>
+                            <span class="stat-label">Stacks principais</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <div class="profile-card">
+                        <div class="profile-photo">
+                            <img src="./assets/perfil1.jpeg" alt="Foto de Fernando"/>
+                        </div>
+                        <div class="profile-info">
+                            <span class="status-pill">Disponivel para projetos</span>
+                            <h2>Full Stack Developer</h2>
+                            <p class="profile-note">SaaS, automacoes, integracoes e experiencias web.</p>
+                        </div>
+                    </div>
+                    <div class="hero-grid">
+                        <div class="mini-card">
+                            <h3>Stack atual</h3>
+                            <div class="chip-group">
+                                <span>JavaScript</span>
+                                <span>Next.js</span>
+                                <span>Apex</span>
+                                <span>Salesforce</span>
+                            </div>
+                        </div>
+                        <div class="mini-card">
+                            <h3>Foco 2026</h3>
+                            <ul>
+                                <li>Produtos SaaS</li>
+                                <li>Design systems</li>
+                                <li>Integracoes</li>
+                            </ul>
+                        </div>
+                        <div class="mini-card">
+                            <h3>Local</h3>
+                            <p>Brasil - remoto e hibrido</p>
+                        </div>
+                        <div class="mini-card">
+                            <h3>Contato rapido</h3>
+                            <a href="https://www.linkedin.com/in/frndmuniz" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            </a>
-        </div>
+            <section class="section projects" id="projects" data-animate>
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow">Projetos</span>
+                        <h2>Trabalhos recentes e cases</h2>
+                    </div>
+                    <div class="filter-bar" role="group" aria-label="Filtro de projetos">
+                        <button class="filter-btn is-active" data-filter="all" aria-pressed="true">Todos</button>
+                        <button class="filter-btn" data-filter="saas" aria-pressed="false">SaaS</button>
+                        <button class="filter-btn" data-filter="fintech" aria-pressed="false">Fintech</button>
+                        <button class="filter-btn" data-filter="impacto" aria-pressed="false">Impacto</button>
+                        <button class="filter-btn" data-filter="salesforce" aria-pressed="false">Salesforce</button>
+                    </div>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card" data-tags="saas web">
+                        <div class="project-top">
+                            <span class="project-tag">SaaS</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3>Meu SaaS</h3>
+                        <p>Plataforma criada para validar ideias rapidamente com foco em automacao e funil de vendas.</p>
+                        <div class="project-links">
+                            <a href="https://primeiro-saas.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir</a>
+                            <span class="project-stack">JS - UI</span>
+                        </div>
+                    </article>
+                    <article class="project-card" data-tags="fintech web">
+                        <div class="project-top">
+                            <span class="project-tag">Fintech</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3>HeleCach</h3>
+                        <p>Aplicacao financeira com interface limpa para fluxo de caixa e controle de gastos.</p>
+                        <div class="project-links">
+                            <a href="https://helecashfinal.onrender.com/" target="_blank" rel="noopener noreferrer">Abrir</a>
+                            <span class="project-stack">Node - UX</span>
+                        </div>
+                    </article>
+                    <article class="project-card" data-tags="impacto web">
+                        <div class="project-top">
+                            <span class="project-tag">Impacto</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3>EcoOil</h3>
+                        <p>Projeto de sustentabilidade com foco em reciclagem e dados para pequenas empresas.</p>
+                        <div class="project-links">
+                            <a href="https://reciclart-mocha.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir</a>
+                            <span class="project-stack">React - Data</span>
+                        </div>
+                    </article>
+                    <article class="project-card" data-tags="salesforce perfil">
+                        <div class="project-top">
+                            <span class="project-tag">Salesforce</span>
+                            <span class="project-year">Perfil</span>
+                        </div>
+                        <h3>Trailhead</h3>
+                        <p>Rotas de aprendizado, badges e progresso em Salesforce com foco em automacoes.</p>
+                        <div class="project-links">
+                            <a href="https://www.salesforce.com/trailblazer/fc0yaucqttnirh30zk" target="_blank" rel="noopener noreferrer">Abrir</a>
+                            <span class="project-stack">Apex - Flow</span>
+                        </div>
+                    </article>
+                </div>
+                <p class="empty-state" hidden>Nenhum projeto com esse filtro.</p>
+            </section>
+
+            <section class="section skills" id="skills" data-animate>
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow">Habilidades</span>
+                        <h2>Areas de dominio e ferramentas</h2>
+                    </div>
+                </div>
+                <div class="skills-grid">
+                    <article class="skill-card" data-animate>
+                        <h3>Frontend</h3>
+                        <p>Interfaces responsivas, animacoes e foco em experiencia do usuario.</p>
+                        <ul>
+                            <li>HTML, CSS, JS</li>
+                            <li>React, Next.js</li>
+                            <li>Design systems</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card" data-animate>
+                        <h3>Backend</h3>
+                        <p>APIs seguras e arquitetura para produtos digitais escalaveis.</p>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Integracoes REST</li>
+                            <li>Automacao de processos</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card" data-animate>
+                        <h3>Salesforce</h3>
+                        <p>Automacoes, Apex e integracoes para times comerciais.</p>
+                        <ul>
+                            <li>Apex e LWC</li>
+                            <li>Flows e triggers</li>
+                            <li>Experiencia CRM</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="marquee" aria-hidden="true">
+                    <div class="marquee-track">
+                        <span>JavaScript</span>
+                        <span>Next.js</span>
+                        <span>Salesforce</span>
+                        <span>Apex</span>
+                        <span>UI Design</span>
+                        <span>APIs</span>
+                        <span>Node.js</span>
+                        <span>UX</span>
+                    </div>
+                    <div class="marquee-track" aria-hidden="true">
+                        <span>JavaScript</span>
+                        <span>Next.js</span>
+                        <span>Salesforce</span>
+                        <span>Apex</span>
+                        <span>UI Design</span>
+                        <span>APIs</span>
+                        <span>Node.js</span>
+                        <span>UX</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section about" id="about" data-animate>
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow">Sobre</span>
+                        <h2>Historia e direcao</h2>
+                    </div>
+                </div>
+                <div class="about-grid">
+                    <article class="about-card">
+                        <h3>Sobre mim</h3>
+                        <p>Sou apaixonado por tecnologia e gosto de transformar problemas reais em produtos digitais simples e eficientes. Trabalho com foco em clareza, velocidade e impacto.</p>
+                        <p>Hoje atuo em projetos web e integracoes Salesforce, criando fluxos que economizam tempo e melhoram a experiencia de clientes e times.</p>
+                        <div class="about-tags">
+                            <span>Produtos digitais</span>
+                            <span>Automacoes</span>
+                            <span>UX e estrategia</span>
+                        </div>
+                    </article>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-year">2022</span>
+                            <p>Inicio em projetos web com foco em interfaces responsivas.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-year">2024</span>
+                            <p>Expansao para SaaS e plataformas de negocio.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-year">2026</span>
+                            <p>Especializacao em automacoes Salesforce e integracoes.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section contact" id="contact" data-animate>
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow">Contato</span>
+                        <h2>Vamos criar algo juntos</h2>
+                    </div>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>Pronto para novos desafios</h3>
+                        <p>Se voce precisa de um parceiro para tirar seu projeto do papel, vamos conversar e criar algo memoravel.</p>
+                        <div class="contact-actions">
+                            <a class="btn primary" href="https://www.linkedin.com/in/frndmuniz" target="_blank" rel="noopener noreferrer">Chamar no LinkedIn</a>
+                            <a class="btn ghost" href="https://github.com/FaultModule" target="_blank" rel="noopener noreferrer">Ver GitHub</a>
+                        </div>
+                    </div>
+                    <div class="social-card">
+                        <h3>Conexoes</h3>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/frndmuniz/" target="_blank" rel="noopener noreferrer">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a>
+                            <a href="https://github.com/FaultModule" target="_blank" rel="noopener noreferrer">
+                                <ion-icon name="logo-github"></ion-icon>
+                            </a>
+                            <a href="https://www.youtube.com/@frndmuniz" target="_blank" rel="noopener noreferrer">
+                                <ion-icon name="logo-youtube"></ion-icon>
+                            </a>
+                            <a href="https://www.linkedin.com/in/frndmuniz" target="_blank" rel="noopener noreferrer">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                            </a>
+                            <a href="https://www.codewars.com/users/FaultModule" target="_blank" rel="noopener noreferrer">
+                                <ion-icon name="qr-code-outline"></ion-icon>
+                            </a>
+                            <a href="https://www.salesforce.com/trailblazer/fc0yaucqttnirh30zk" target="_blank" rel="noopener noreferrer">
+                                <ion-icon name="cloud-outline"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <span>(c) 2026 Fernando Muniz. Portfolio digital.</span>
+            <span>Feito com foco em produto e tecnologia.</span>
+        </footer>
     </div>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="./script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
