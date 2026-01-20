@@ -199,6 +199,14 @@ button {
     gap: 12px;
 }
 
+.lang-link {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 10px 14px;
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -718,6 +726,40 @@ button {
     font-size: 13px;
 }
 
+.whatsapp-button {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface-strong);
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+    z-index: 5;
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-1px);
+    border-color: var(--accent);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.25);
+}
+
+.whatsapp-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+}
+
 @media (max-width: 980px) {
     .hero {
         grid-template-columns: 1fr;
@@ -768,6 +810,11 @@ button {
     .footer {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .whatsapp-button {
+        right: 16px;
+        bottom: 16px;
     }
 }
 
